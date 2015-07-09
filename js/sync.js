@@ -5,13 +5,11 @@
   });
 
   $(document).ready(function() {
-    return SC.get('/tracks', {
-      genres: 'rap'
-    }, function(tracks) {
-      return $(tracks).each(function(index, track) {
-        return $('#results').append($('<li></li>').html(track.title + ' - ' + track.genre));
-      });
-    });
-  });
+	  SC.get('/tracks', { genres: 'rap' }, function(tracks) {
+	    $(tracks).each(function(index, track) {
+	      $('#results').append($('<li></li>').html(track.title + ' - ' + track.genre));
+	    });
+	  });
+	});
 
 }).call(this);
