@@ -5,11 +5,9 @@
   });
 
   $(document).ready(function() {
-    return SC.get('/tracks', {
-      genres: 'rap'
-    }, function(tracks) {
-      return $(tracks).each(function(index, track) {
-        return $('#results').append($('<li></li>').html(track.title + ' - ' + track.genre));
+    return SC.stream('/tracks/290', function(sound) {
+      return $('#start').click(function(e) {
+        return sound.start();
       });
     });
   });
