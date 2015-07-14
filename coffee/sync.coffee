@@ -6,7 +6,7 @@ $(document).ready ->
 		sound.load
 			stream: false,
 			onload: -> 
-				this.play
+				this.play()
 				timestamp = new Date.getTime()
 				console.log timestamp
 

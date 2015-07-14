@@ -10,7 +10,7 @@
         stream: false,
         onload: function() {
           var timestamp;
-          this.play;
+          this.play();
           timestamp = new Date.getTime();
           return console.log(timestamp);
         }
