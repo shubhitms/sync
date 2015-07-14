@@ -7,7 +7,7 @@ $(document).ready ->
 			stream: false,
 			onload: -> 
 				this.play
-				timestamp = Date.now	
+				timestamp = Date.now()
 				console.log timestamp
 
 
