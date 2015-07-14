@@ -10,8 +10,11 @@
         stream: false,
         onload: function() {
           var timestamp;
+          console.log("before playing");
           this.play();
+          console.log("after playing");
           timestamp = new Date.getTime();
+          console.log("after getting time");
           console.log(timestamp);
         }
       });
