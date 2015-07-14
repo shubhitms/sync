@@ -3,16 +3,12 @@ SC.initialize
 
 $(document).ready ->
 	SC.stream '/tracks/290', (sound) ->
-		if not sound.loaded
-			sound.load
-				stream: false,
-				onload: -> 
-					this.play
-					timestamp = Date.now
-		else
-			sound.play
-			timestamp = Date.now
-		console.log timestamp
+		sound.load
+			stream: false,
+			onload: -> 
+				this.play
+				timestamp = Date.now	
+				console.log timestamp
 
 
 

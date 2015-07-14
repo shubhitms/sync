@@ -6,21 +6,15 @@
 
   $(document).ready(function() {
     return SC.stream('/tracks/290', function(sound) {
-      var timestamp;
-      if (!sound.loaded) {
-        sound.load({
-          stream: false,
-          onload: function() {
-            var timestamp;
-            this.play;
-            return timestamp = Date.now;
-          }
-        });
-      } else {
-        sound.play;
-        timestamp = Date.now;
-      }
-      return console.log(timestamp);
+      return sound.load({
+        stream: false,
+        onload: function() {
+          var timestamp;
+          this.play;
+          timestamp = Date.now;
+          return console.log(timestamp);
+        }
+      });
     });
   });
 
