@@ -3,5 +3,21 @@ SC.initialize
 
 $(document).ready ->
 	SC.stream '/tracks/290', (sound) ->
-		$('#start').click (e) ->
-			sound.start()
+		if not sound.loaded
+			sound.load
+				stream: false,
+				onload: -> 
+					this.play
+					timestamp = Date.now
+		else
+			sound.play
+			timestamp = Date.now
+		console.log timestamp
+
+
+
+
+
+
+
+
