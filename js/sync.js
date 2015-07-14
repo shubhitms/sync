@@ -11,7 +11,7 @@
         onload: function() {
           var timestamp;
           this.play;
-          timestamp = Date.now();
+          timestamp = new Date.getTime();
           return console.log(timestamp);
         }
       });
