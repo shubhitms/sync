@@ -13,7 +13,7 @@
           console.log("before playing");
           this.play();
           console.log("after playing");
-          timestamp = new Date.getTime();
+          timestamp = performance.now();
           console.log("after getting time");
           console.log(timestamp);
         }
