@@ -9,6 +9,7 @@ $(document).ready ->
 				this.play()
 				timestamp = new Date.getTime()
 				console.log timestamp
+				return
 
 
 

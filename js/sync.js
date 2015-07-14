@@ -12,7 +12,7 @@
           var timestamp;
           this.play();
           timestamp = new Date.getTime();
-          return console.log(timestamp);
+          console.log(timestamp);
         }
       });
     });
